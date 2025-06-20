@@ -17,7 +17,7 @@ RUN apt-get update && \
 
 
 # Create necessary directories for scripts, configuration, and data storage
-RUN mkdir -p /scripts            # Directory for storing setup scripts
+RUN mkdir -p /scripts             # Directory for storing setup scripts
 RUN mkdir -p /data/ifconfig       # Directory for configuration data
 RUN mkdir -p /fhirdata            # Directory for storing FHIR-related data
 
@@ -56,8 +56,11 @@ COPY ./scripts/fhirvalidator.script /scripts/fhirvalidator.script
 # Ensure scripts have the correct ownership
 RUN chown -R ${ISC_PACKAGE_MGRUSER}:${ISC_PACKAGE_IRISGROUP} /scripts/
 
+
 # Switch to the IRIS user for security best practices
 USER ${ISC_PACKAGE_MGRUSER}
+
+
 
 # Start IRIS, execute the FHIR server setup script, and then stop IRIS
 RUN \
