@@ -1,0 +1,97 @@
+
+# metatdata requests on unsecured channel
+GET http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/metadata
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+# metatdata requests on unsecured channel
+GET http://127.0.0.1:52773/csp/healthshare/demo/fhir/r4/metadata
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+# metadata request on secured channel
+GET https://127.0.0.1:8443/csp/healthshare/demo/fhir/r4/metadata
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+
+
+###
+# these next rest call are related to server managment
+GET http://127.0.0.1:8080/csp/fhir-management/api/namespaces
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+###
+# these next rest call are related to server managment
+GET http://127.0.0.1:8080/csp/fhir-management/api/endpoints?namespace=demo
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+###
+###
+# these next rest call are related to server managment
+GET http://127.0.0.1:8080/csp/fhir-management/api/packages?namespace=demo
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+###
+# these next rest call are related to server managment
+GET http://127.0.0.1:8080/csp/fhir-management/api/packages?namespace=demo
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+GET http://127.0.0.1:8080/csp/fhir-management/api/packages?namespace=demo&id=hl7.fhir.r4.core@4.0.1
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+###
+PATCH https://dev-1h5yru1mv5rucu2k.us.auth0.com/api/v2/clients/{client_id}
+Authorization: Bearer {explorer_token}
+Content-Type: application/json
+
+{
+  "is_first_party": true
+}
+###
+
+# these next rest call are related to server managment
+GET https://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/Patient/2
+Authorization: Authorization:Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1sbnV0ZW94MlBmcmFlS3pUOXJXciJ9.eyJpc3MiOiJodHRwczovL2Rldi0xaDV5cnUxbXY1cnVjdTJrLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2M2RiYjJiYjk5MTFiZmI1ZTc5MzVkOWEiLCJhdWQiOiJodHRwczovLzEyNy4wLjAuMTo4MDgwL2NzcC9oZWFsdGhzaGFyZS9kZW1vL2ZoaXIvcjQiLCJpYXQiOjE3NDk1ODA3ODgsImV4cCI6MTc0OTY2NzE4OCwic2NvcGUiOiJ1c2VyLyouKiIsImF6cCI6ImdYc1NZWEpOWldJbllKMm9McTlyTTBHSllPOWRWQm1QIn0.oc1cLq5dI0mBA-YGSNnCtzINWTF1noCVvkAVBdVWf13GkzZkMVLbPwLPaxikjITX7yzHON2h5e2i4n9dt7Eleh-BTC0Ze3GoUGVdhsLcU3pc8EtY_6l3cBVaLBmCQUdLfkUDP5MYQH09liTxOZ35cL1qjHqkOo-aVNEC5kT8-IabM6W5mKHqxDS-023i6LWanZ1fXKVkovNhjIcxrU2rzley_IB53eJ-Fv9sKvCal1OTVLXofJe9JV4Q7XcsankZcClWMnD3aYMJVCs-IooAkaeG48M8Sm6VJs3sYwphR1HH6p8GtoKIIrx8xQ0Wj4ALuugpFDzidbWrSIKEEQqT4Q
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
